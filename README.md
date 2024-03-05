@@ -1,3 +1,3 @@
-Online Car Dealing
-This project has user module and admin module 
+Online Car Dealing <br>
+This project has user module and admin module <br>
 Website has user friendly interface
