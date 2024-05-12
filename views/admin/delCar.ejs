@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Studio</title>
+    <link rel="icon" type="image/x-icon" href="/Images/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bai Jamjuree' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <div class="headerclass">
+
+            <ul class="navbar">
+                <li><a href="/landing" id="landingpage">LOG OUT</a></li>
+                <li><a href="/admin/feedback" id="feedbackpage">FEEDBACK</a></li>
+                <li><a href="/admin/user" id="userpage">USERS</a></li>
+                <li><a href="/admin/Spareparts" id="sparepartspage">SPARE PARTS</a></li>
+                <li><a href="/admin/Bikes"  id="bikespage">BIKES</a></li>
+                <li><a href="/admin/Cars" id="carspage">CARS</a></li>
+                <li><a href="/admin/adminhome" id ="adminhome">HOME</a></li>
+                <li class="titlehome">AUTOMOTIVE STUDIO</li>
+            </ul>
+        </div>
+    </header>
+    <!-- body section  -->
+    <section>
+        <div class="leftcenter">
+            <img src="/Images/logo.png" alt="logo">
+        </div>
+        <br>
+        <h3>DELETE THE CAR</h3>
+        <br>
+        <div class="center">
+            <form action="/admin/deletecars" method="post" name="deletecarform">
+                <div class="centerbox">
+                    <div>
+                        <input type="text" name="mycarID" id="carID" placeholder="Enter Car ID">
+                    </div>
+                    <div class="center">
+                        <button type="submit" value="deletecars">Delete Car</button> 
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </section>
+    <!--end body section  -->
+    <footer>
+        <p>© All Rights Reserved. Design by <a href="#"> Tahir </a></p>
+    </footer>
+
+</body>
+
+</html>

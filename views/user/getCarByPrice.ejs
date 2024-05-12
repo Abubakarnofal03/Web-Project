@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Studio</title>
+    <link rel="icon" type="image/x-icon" href="/Images/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bai Jamjuree' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <div class="headerclass">
+
+            <ul class="navbar">
+                <li><a href="/landing" id="landingpage">LOG OUT</a></li>
+                <li><a href="/user/ContactUs" id="ContactUs">CONTACT US</a></li>
+                <li><a href="/user/AboutUs" id="AboutUs">ABOUT US</a></li>
+                <li><a href="/user/Spareparts" id="sparepartspage">SPARE PARTS</a></li>
+                <li><a href="/user/Bikes"  id="bikespage">BIKES</a></li>
+                <li><a href="/user/Cars" id="carspage">CARS</a></li>
+                <li><a href="/user/userhome" id ="adminhome">HOME</a></li>
+                
+
+               <li class="titlehome">AUTOMOTIVE STUDIO</li>
+            </ul>
+        </div>
+    </header>
+    <!-- body section  -->
+     <div>
+        <div>
+            <div class="leftcenter">
+                <img src="/Images/logo.png" alt="logo">
+            </div>
+            <h2>Find A  Best Car To Purchase</h2>
+            <form action="/user/searchCarsbyPrice" method="post" name="searchbyidform">
+                <input placeholder="From Price" type="Search" name="FromPrice">
+                <input placeholder="To Price" type="Search" name="ToPrice">
+                <div class="center">
+                    <button type="submit" value="findById">Find</button>  
+                </div>
+            </form>
+         </div>
+     </div>
+
+     <!-- display products -->
+     <br>
+     <h3>CAR DETAILS</h3>
+     <br>
+     <div class="displaycenter">
+        <table>
+            <thead>
+                <tr>
+                    <TH>ID</TH>
+                    <TH>IMAGE</TH>
+                    <TH>CAR NAME</TH>
+                    <TH>COMPNAY NAME</TH>
+                    <TH>MODEL</TH>
+                    <TH>PRICE</TH>
+                    <TH>PHONE NUMBER</TH>
+                </tr>
+            </thead>
+
+            
+          </table>
+     </div>
+     
+     
+
+    <!--end body section  -->
+    <footer>
+        <p>© All Rights Reserved. Design by <a href="#"> Tahir </a></p>
+    </footer>
+
+
+    <script>
+        const logout = document.getElementById("landingpage");
+        const sparepartspage = document.getElementById("sparepartspage");
+        const carspage = document.getElementById("carspage");
+        const bikespage = document.getElementById("bikespage");
+        const homepage = document.getElementById("adminhome");
+        const userpage = document.getElementById("userpage");
+        const feedbackpage = document.getElementById("feedbackpage");
+        const ContactUs = document.getElementById("ContactUs");
+        const AboutUs = document.getElementById("AboutUs");
+
+
+        ContactUs.addEventListener("click", () => {
+            location.href = "/user/ContactUs";
+        })
+        AboutUs.addEventListener("click", () => {
+            location.href = "/user/AboutUs";
+        })
+
+        homepage.addEventListener("click", () => {
+            location.href = "/user/userhome";
+        })
+        sparepartspage.addEventListener("click", () => {
+            location.href = "/user/Spareparts";
+        })
+        
+        bikespage.addEventListener("click", () =>{
+             location.href ="/user/Bikes";
+        })
+
+        carspage.addEventListener("click", () =>{
+             location.href ="/user/Cars";
+        })
+
+        userpage.addEventListener("click", () =>{
+             location.href ="/user/Users";
+        })
+
+        feedbackpage.addEventListener("click", () =>{
+             location.href ="/user/Feedbacks";
+        })
+
+        const addcars = document.getElementById("addcarspage");
+        const addbikes = document.getElementById("addsparepartspage");
+        const addspareparts = document.getElementById("addbikespage");
+
+
+
+        addbikes.addEventListener("click", () => {
+            location.href = "/user/addbikes";
+        })
+        addspareparts.addEventListener("click", () => {
+            location.href = "/user/addspareparts";
+        })
+        addcars.addEventListener("click", () =>{
+             location.href ="/user/addcars";
+        })
+
+        const filercarsbyid = document.getElementById("filercarsbyid");
+        const filtercarsbyprice = document.getElementById("filtercarsbyprice");
+        const filterbikesbyprice = document.getElementById("filterbikesbyprice");
+        const filterbikebyid = document.getElementById("filterbikebyid");
+        const filtersparepartbyid = document.getElementById("filtersparepartbyid");
+        const filtersparepartbyprice = document.getElementById("filtersparepartbyprice");
+
+        filercarsbyid.addEventListener("click", () => {
+            location.href = "/user/retrivecarsbyid";
+        })
+        filtercarsbyprice.addEventListener("click", () => {
+            location.href = "/user/searchCarsbyPrice";
+        })
+        filterbikesbyprice.addEventListener("click", () =>{
+             location.href ="/user/searchBikesbyPrice";
+        })
+        filterbikebyid.addEventListener("click", () =>{
+             location.href ="/user/retrivebikesbyid";
+        })
+        filtersparepartbyid.addEventListener("click", () =>{
+             location.href ="/user/retrivesparepartsbyid";
+        })
+        filtersparepartbyprice.addEventListener("click", () =>{
+             location.href ="/user/searchSparePartsbyPrice";
+        })
+
+    </script>
+</body>
+
+</html>

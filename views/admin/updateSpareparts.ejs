@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Studio</title>
+    <link rel="icon" type="image/x-icon" href="/Images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bai Jamjuree' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <div class="headerclass">
+            <ul class="navbar">
+                <li><a href="/landing" id="landingpage">LOG OUT</a></li>
+                <li><a href="/admin/feedback" id="feedbackpage">FEEDBACK</a></li>
+                <li><a href="/admin/user" id="userpage">USERS</a></li>
+                <li><a href="/admin/Spareparts" id="sparepartspage">SPARE PARTS</a></li>
+                <li><a href="/admin/Bikes"  id="bikespage">BIKES</a></li>
+                <li><a href="/admin/Cars" id="carspage">CARS</a></li>
+                <li><a href="/admin/adminhome" id ="adminhome">HOME</a></li>
+                <li class="titlehome">AUTOMOTIVE STUDIO</li>
+            </ul>
+        </div>
+    </header>
+    <!-- body section  -->
+    <section>
+        <div class="leftcenter">
+            <img src="/Images/logo.png" alt="logo">
+        </div>
+        <h3>UPDATE THE Spareparts</h3>
+        <div class="center">
+            <form action="/admin/updatespareparts" method="post"  name="updateBikeform"  enctype="multipart/form-data">
+                <div class="centerbox">
+                    <div>
+                        <input type="text" name="bikeid" placeholder="Enter ID of Spare Part you want to update">
+                    </div>
+                    <div>
+                        <input type="text" name="mybikeNameID" placeholder=" Spareparts Name">
+                    </div>
+                    <div>
+                        <input type="text" name="mycompanyNameID" placeholder="which automobile part?">
+                    </div>
+                    <div>
+                        <input type="text" name="myModel" placeholder="Model of bike">
+                    </div>
+                    <div>
+                        <input type="text" name="myprice" placeholder="Price">
+                    </div>
+                    <div>
+                        <input type="text" name="phonenumber" placeholder="phone">
+                    </div>
+                    <div>
+                        <input type="file"  name="image" placeholder="Enter the Product Image">
+                    </div>
+                        
+                    <div class="center">
+                        <button type="submit">UPDATE Spareparts</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </section>
+    <!--end body section  -->
+    <footer>
+        <p>© All Rights Reserved. Design by <a href="#"> Tahir </a></p>
+    </footer>
+
+
+    <script>
+
+                // Get the form element
+        const form = document.forms['updateBikeform'];
+
+        // Add a submit event listener to the form
+        form.addEventListener('submit', function(event) {
+          // Prevent the form from submitting
+          event.preventDefault();
+        
+          // Retrieve form inputs
+          const bikeId = form.elements['bikeid'].value;
+          const bikeName = form.elements['mybikeNameID'].value;
+          const companyName = form.elements['mycompanyNameID'].value;
+          const color = form.elements['mycolorID'].value;
+          const model = form.elements['myModel'].value;
+          const price = form.elements['myprice'].value;
+          const phoneNumber = form.elements['phonenumber'].value;
+        
+          // Regular expressions for validation
+          const phoneRegex = /^03\d{9}$/;
+          const emptyRegex = /^\s*$/;
+        
+          // Check if any field is empty
+          if (emptyRegex.test(bikeId) || emptyRegex.test(bikeName) || emptyRegex.test(companyName) || emptyRegex.test(color) || emptyRegex.test(model) || emptyRegex.test(price) || emptyRegex.test(phoneNumber)) {
+            alert('Please fill in all fields.');
+            return;
+          }
+      
+          // Check if phoneNumber is in the correct format and length
+          if (!phoneRegex.test(phoneNumber)) {
+            alert('Please enter a valid phone number in the format 03XXXXXXXXX.');
+            return;
+          }
+      
+          // If all validations pass, submit the form
+          form.submit();
+        });
+
+
+        
+        const logout = document.getElementById("landingpage");
+        const sparepartspage = document.getElementById("sparepartspage");
+        const carspage = document.getElementById("carspage");
+        const bikespage = document.getElementById("bikespage");
+        const homepage = document.getElementById("adminhome");
+        const userpage = document.getElementById("userpage");
+        const feedbackpage = document.getElementById("feedbackpage");
+
+        homepage.addEventListener("click", () => {
+            location.href = "/admin/adminhome";
+        })
+        sparepartspage.addEventListener("click", () => {
+            location.href = "/admin/Spareparts";
+        })
+        
+        bikespage.addEventListener("click", () =>{
+             location.href ="/admin/Bikes";
+        })
+
+        carspage.addEventListener("click", () =>{
+             location.href ="/admin/Cars";
+        })
+
+        userpage.addEventListener("click", () =>{
+             location.href ="/admin/Users";
+        })
+
+        feedbackpage.addEventListener("click", () =>{
+             location.href ="/admin/Feedbacks";
+        })
+
+
+
+        const updatecars = document.getElementById("updatecarspage");
+        const updatebikes = document.getElementById("updatesparepartspage");
+        const updatespareparts = document.getElementById("updatebikespage");
+        const updateusers = document.getElementById("updateuserspage");
+
+        const deleteecars = document.getElementById("deletecarspage");
+        const deletebikes = document.getElementById("deletesparepartspage");
+        const deletespareparts = document.getElementById("deletebikespage");
+        const deleteeusers = document.getElementById("deleteuserspage");
+
+        const addcars = document.getElementById("addcarspage");
+        const addbikes = document.getElementById("addsparepartspage");
+        const addspareparts = document.getElementById("addbikespage");
+        const adduser = document.getElementById("adduserspage");
+
+
+        updatebikes.addEventListener("click", () => {
+            location.href = "/admin/updatebikes";
+        })
+        updatespareparts.addEventListener("click", () => {
+            location.href = "/admin/updatespareparts";
+        })
+        updatecars.addEventListener("click", () =>{
+             location.href ="/admin/updatecars";
+        })
+        updateusers.addEventListener("click", () =>{
+             location.href ="/admin/updateusers";
+        })
+
+
+        addbikes.addEventListener("click", () => {
+            location.href = "/admin/addbikes";
+        })
+        addspareparts.addEventListener("click", () => {
+            location.href = "/admin/addspareparts";
+        })
+        addcars.addEventListener("click", () =>{
+             location.href ="/admin/addcars";
+        })
+        adduser.addEventListener("click", () =>{
+             location.href ="/admin/addusers";
+        })
+
+
+        deletebikes.addEventListener("click", () => {
+            location.href = "/admin/deletebikes";
+        })
+        deletespareparts.addEventListener("click", () => {
+            location.href = "/admin/deletespareparts";
+        })
+        deleteecars.addEventListener("click", () =>{
+             location.href ="/admin/deletecars";
+        })
+        deleteeusers.addEventListener("click", () =>{
+             location.href ="/admin/deleteusers";
+        })
+
+        
+        //<a href="/admin/retrivecarsbyid"  id="filercarsbyid">FILTER CAR BY ID</a>
+        //<a href="/admin/searchCarsbyPrice" id="filtercarsbyprice">FILTER CAR BY PRICE</a>
+        //<a href="/admin/searchBikesbyPrice" id="filterbikesbyprice">FILTER BIKE BY PRICE</a>
+        //<a href="/admin/retrivebikesbyid"  id="filterbikebyid">FILTER BIKE BY ID</a>
+        //<a href="/admin/retrivesparepartsbyid"  id="filtersparepartbyid">FILTER SPAREPART BY ID</a>
+        //<a href="/admin/searchSparePartsbyPrice"  id="filtersparepartbyprice">FILTER SPAREPART BY PRICE</a>
+        //<a href="/admin/searchUsers"  id="filerUserByID">FILTER USER BY ID</a>
+
+        const filercarsbyid = document.getElementById("filercarsbyid");
+        const filtercarsbyprice = document.getElementById("filtercarsbyprice");
+        const filterbikesbyprice = document.getElementById("filterbikesbyprice");
+        const filterbikebyid = document.getElementById("filterbikebyid");
+        const filtersparepartbyid = document.getElementById("filtersparepartbyid");
+        const filtersparepartbyprice = document.getElementById("filtersparepartbyprice");
+        const filerUserByID = document.getElementById("filerUserByID");
+
+
+        filercarsbyid.addEventListener("click", () => {
+            location.href = "/admin/retrivecarsbyid";
+        })
+        filtercarsbyprice.addEventListener("click", () => {
+            location.href = "/admin/searchCarsbyPrice";
+        })
+        filterbikesbyprice.addEventListener("click", () =>{
+             location.href ="/admin/searchBikesbyPrice";
+        })
+        filterbikebyid.addEventListener("click", () =>{
+             location.href ="/admin/retrivebikesbyid";
+        })
+        filtersparepartbyid.addEventListener("click", () =>{
+             location.href ="/admin/retrivesparepartsbyid";
+        })
+        filtersparepartbyprice.addEventListener("click", () =>{
+             location.href ="/admin/searchSparePartsbyPrice";
+        })
+        filerUserByID.addEventListener("click", () =>{
+             location.href ="/admin/searchUsers";
+        })
+
+    </script>
+</body>
+
+</html>

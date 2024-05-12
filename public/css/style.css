@@ -1,0 +1,337 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo';
+    font-size: 22px;
+    font-size: 16px;
+    text-align: center;
+    background-color: rgb(222, 222, 222);
+}
+
+.displaycenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftcenter {
+    display: flex;
+    justify-content: left;
+}
+
+table {
+    margin: 20px;
+    border-collapse: collapse;
+    width: 1200px;
+    background-color: rgb(243, 243, 243);
+}
+
+.displayimg {
+    width: 150px;
+}
+
+th {
+    border: 1px solid #7a7a7a;
+    padding: 8px;
+    background-color: rgb(143, 29, 29);
+    color: white;
+}
+
+td {
+    border: 1px solid #7a7a7a;
+    padding: 8px;
+}
+
+.dropdown-btn {
+    background-color: rgb(143, 29, 29);
+    color: #fff;
+    border: none;
+}
+
+/* Styles for the dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Styles for the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    /* min-width: 160px; */
+    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+    z-index: 1;
+    margin-top: -10px;
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Styles for dropdown links */
+.dropdown-content a {
+    text-align: left;
+    color: #ad5c5c;
+    padding: 12px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change the link color on hover */
+.dropdown-content a:hover {
+    color: #000000;
+}
+
+footer {
+    margin: 10px;
+}
+
+.container input,
+.container textarea {
+    background-color: #e3e3e3;
+}
+
+.items img {
+    width: 360px;
+}
+
+#start a {
+    color: white;
+}
+
+#start a:hover {
+    color: rgb(0, 0, 0);
+}
+
+input[type=file] {
+    background-color: white;
+}
+
+.container {
+    margin-left: 100px;
+    padding: 10px 20px;
+    width: 480px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(200, 200, 200);
+    border: 1px solid #848484;
+    border-radius: 40px;
+}
+
+img[alt=cover] {
+    width: 700px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: left;
+    position: absolute;
+    left: 580px;
+    top: 225px;
+    z-index: -1;
+    background-color: rgb(143, 29, 29);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+h3 {
+    margin: 5px;
+    font-family: 'Caveat';
+    font-size: 22px;
+}
+
+h4 {
+    font-family: 'Bai Jamjuree';
+    font-size: 18px;
+    margin: 20px;
+    padding: 30px;
+    font-weight: lighter;
+}
+
+img[alt=aboutlogo] {
+    margin-top: 10px;
+    width: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img[alt=logo] {
+    margin-top: 10px;
+    margin-left: 120px;
+    width: 100px;
+}
+
+img[alt="#"] {
+    width: 100px;
+    margin: 10px 20px;
+}
+
+.titlehome {
+    float: none;
+    margin-right: 150px;
+    font-weight: bold;
+    font-size: large;
+    padding-top: 13px;
+    font-family: 'Aclonica';
+    font-size: 22px;
+    /* font-size: 46px; */
+    color: white;
+}
+
+img[alt=buy] {
+    width: 25px;
+}
+
+.one {
+    font-size: 22px;
+    margin: 10px 30px;
+}
+
+.one:hover {
+    color: rgb(143, 29, 29);
+    font-weight: bold;
+}
+
+.productid {
+    width: 30px;
+    height: 180px;
+}
+
+.productblocks {
+    width: 250px;
+    height: 180px;
+}
+
+.search {
+    color: white;
+    background-color: rgb(143, 29, 29);
+    cursor: pointer;
+    width: 90px;
+    height:30px;
+    transition: 0.5s;
+}
+.search:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(212, 212, 212);
+}
+.centerbox2{
+    padding: 10px 10px;
+    margin: 10px 500px;
+}
+.pages{
+    padding: 0px 16px;
+    color: #3f3f3f;
+}
+.pages:hover{
+    background-color: #ffffff;
+}
+.title {
+    float: none;
+    margin-right: 600px;
+    font-weight: bold;
+    font-size: large;
+    padding-top: 13px;
+    font-family: 'Aclonica';
+    font-size: 22px;
+    /* font-size: 46px; */
+    color: white;
+}
+
+textarea {
+    padding: 15px;
+    width: 380px;
+    height: 250px;
+    border-radius: 30px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid rgb(133, 50, 205); */
+}
+
+.centerbox {
+    border-radius: 30px;
+    padding: 10px 100px;
+    margin-top: 10px;
+    border: 2px solid rgb(108, 108, 108);
+}
+
+input {
+    /* padding: 0px 10px; */
+    width: 380px;
+    height: 36px;
+    margin: 8px;
+    padding: 5px;
+    padding-left: 20px;
+    text-align: left;
+    border-radius: 24px;
+    border: 1px solid rgb(109, 109, 109);
+    /* font-family: 'SourceSans', sans-serif; */
+}
+
+
+button {
+    width: 180px;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid rgb(81, 81, 81);
+    border-radius: 24px;
+    transition: .5s;
+    font-weight: bold;
+    color: white;
+    margin: 10px;
+    background-color: rgb(143, 29, 29);
+
+}
+
+button:hover {
+    background-color: #d2d2d2;
+    color: #000000;
+}
+
+
+.account {
+    text-align: center;
+    font-size: small;
+    font-family: 'Cairo';
+    font-size: 16px;
+}
+
+ul.navbar {
+    list-style-type: none;
+    margin: -10px;
+    padding-top: 10px;
+    overflow: hidden;
+    height: 60px;
+    background-color: rgb(143, 29, 29);
+
+}
+
+/* Style for each navigation item */
+ul.navbar li {
+    float: right;
+}
+
+/* Style for the navigation links */
+ul.navbar li a {
+    display: block;
+    padding: 14px 12px;
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+}
+
+/* Change the link color on hover */
+ul.navbar li a:hover {
+    color: #000000;
+    background-color: #d2d2d2;
+}

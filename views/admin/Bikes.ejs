@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Studio</title>
+    <link rel="icon" type="image/x-icon" href="/Images/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bai Jamjuree' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <div class="headerclass">
+
+            <ul class="navbar">
+              <!--<li><a href="/ContactUs">CONTACT US</a></li> -->
+               <!--<li><a href="/AboutUs">ABOUT US</a></li> -->
+               <li><a href="/landing" id="landingpage">LOG OUT</a></li>
+               <li><a href="/admin/Spareparts" id="sparepartspage">SPARE PARTS</a></li>
+               <li><a href="/admin/Bikes"  id="bikespage">BIKES</a></li>
+               <li><a href="/admin/Cars" id="carspage">CARS</a></li>
+               <li><a href="/admin/adminhome" id ="adminhome">HOME</a></li>
+               <li class="titlehome">AUTOMOTIVE STUDIO</li>
+            </ul>
+        </div>
+    </header>
+    <!-- body section  -->
+     <div>
+        <div>
+            <div class="leftcenter">
+                <img src="/Images/logo.png" alt="logo">
+            </div>
+            <h2>Find A  Best Bikes To Purchase</h2>
+         </div>
+     </div>
+
+      <!-- display products -->
+      <br>
+     <h3>BIKE DETAILS</h3>
+     <br>
+     <div class="displaycenter">
+        <table>
+            <thead>
+                <tr>
+                    <TH>ID</TH>
+                    <TH>IMAGE</TH>
+                    <TH>BIKE NAME</TH>
+                    <TH>COMPNAY NAME</TH>
+                    <TH>MODEL</TH>
+                    <TH>PRICE</TH>
+                    <TH>PHONE NUMBER</TH>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <% Bikesdata.forEach(function(Car) { %>
+                    <tr>
+                        <td class="productid"><%= Car.id %></td>
+                        <td class="productblocks"><img class="displayimg" src="<%= Car.picture %>" alt="bike_di_tasver"></td>
+                        <td class="productblocks"><%= Car.bikeName %></td>
+                        <td class="productblocks"><%= Car.companyName %></td>
+                        <td class="productblocks"><%= Car.model %></td>
+                        <td class="productblocks"><%= Car.price %></td>
+                        <td class="productblocks"><%= Car.phonenumber %></td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+          </table>
+     </div>
+     
+
+    <!--end body section  -->
+    <footer>
+      <p>© All Rights Reserved. Design by <a href="#"> Tahir </a></p>
+  </footer>
+
+<script>
+  const logout = document.getElementById("landingpage");
+        const sparepartspage = document.getElementById("sparepartspage");
+        const carspage = document.getElementById("carspage");
+        const bikespage = document.getElementById("bikespage");
+        const homepage = document.getElementById("adminhome");
+
+        homepage.addEventListener("click", () => {
+            location.href = "/admin/adminhome";
+        })
+        sparepartspage.addEventListener("click", () => {
+            location.href = "/admin/Spareparts";
+        })
+        
+        bikespage.addEventListener("click", () =>{
+             location.href ="/admin/Bikes";
+        })
+
+        carspage.addEventListener("click", () =>{
+             location.href ="/admin/Cars";
+        })
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Studio</title>
+    <link rel="icon" type="image/x-icon" href="/Images/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bai Jamjuree' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <div class="headerclass">
+            <ul class="navbar">
+                <li><a href="/landing" id="landingpage">LOG OUT</a></li>
+                <li><a href="/admin/feedback" id="feedbackpage">FEEDBACK</a></li>
+                <li><a href="/admin/user" id="userpage">USERS</a></li>
+                <li><a href="/admin/Spareparts" id="sparepartspage">SPARE PARTS</a></li>
+                <li><a href="/admin/Bikes"  id="bikespage">BIKES</a></li>
+                <li><a href="/admin/Cars" id="carspage">CARS</a></li>
+                <li><a href="/admin/adminhome" id ="adminhome">HOME</a></li>
+                
+                <li class="titlehome">AUTOMOTIVE STUDIO</li>
+            </ul>
+        </div>
+    </header>
+    <!-- body section  -->
+    <section>
+        <div class="leftcenter">
+            <img src="/Images/logo.png" alt="logo">
+        </div>
+        <h3>ADD THE USER</h3>
+        <div class="center">
+            <form action="/admin/addusers" method="post" name="addUserform">
+                <div class="centerbox">
+                    <div>
+                        <input type="text" name="userName" placeholder="Enter the Name">
+                    </div>
+                    <div>
+                        <input type="text" name="userEmail" placeholder="Enter the Email ID">
+                    </div>
+                    <div>
+                        <input type="text" name="userPhone" placeholder="Enter the Phone Number">
+                    </div>
+                    <div>
+                        <input type="password" name="userPassword" placeholder="Password">
+                    </div>
+                    <div class="center">
+                        <button type="submit" value="addsUser">ADD User</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </section>
+    <!--end body section  -->
+    <footer>
+        <p>© All Rights Reserved. Design by <a href="#"> Tahir </a></p>
+    </footer>
+
+    <script>
+
+
+        // Get the form element
+        const form = document.forms['addUserform'];
+
+        // Add a submit event listener to the form
+        form.addEventListener('submit', function(event) {
+          // Prevent the form from submitting
+          event.preventDefault();
+        
+          // Retrieve form inputs
+          const userName = form.elements['userName'].value;
+          const userEmail = form.elements['userEmail'].value;
+          const userPhone = form.elements['userPhone'].value;
+          const userPassword = form.elements['userPassword'].value;
+        
+          // Regular expressions for validation
+          const phoneRegex = /^03\d{9}$/;
+          const emailRegex = /^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com)$/;
+          const emptyRegex = /^\s*$/;
+        
+          // Check if any field is empty
+          if (emptyRegex.test(userName) || emptyRegex.test(userEmail) || emptyRegex.test(userPhone) || emptyRegex.test(userPassword)) {
+            alert('Please fill in all fields.');
+            return;
+          }
+      
+          // Check if userPhone is in the correct format and length
+          if (!phoneRegex.test(userPhone)) {
+            alert('Please enter a valid phone number in the format 03XXXXXXXXX.');
+            return;
+          }
+      
+          // Check if userEmail is in the correct format
+          if (!emailRegex.test(userEmail)) {
+            alert('Please enter a valid email address.');
+            return;
+          }
+      
+          // If all validations pass, submit the form
+          form.submit();
+        });
+
+
+
+
+
+
+
+
+
+
+
+        const logout = document.getElementById("landingpage");
+        const sparepartspage = document.getElementById("sparepartspage");
+        const carspage = document.getElementById("carspage");
+        const bikespage = document.getElementById("bikespage");
+        const homepage = document.getElementById("adminhome");
+        const userpage = document.getElementById("userpage");
+        const feedbackpage = document.getElementById("feedbackpage");
+
+        homepage.addEventListener("click", () => {
+            location.href = "/admin/adminhome";
+        })
+        sparepartspage.addEventListener("click", () => {
+            location.href = "/admin/Spareparts";
+        })
+        
+        bikespage.addEventListener("click", () =>{
+             location.href ="/admin/Bikes";
+        })
+
+        carspage.addEventListener("click", () =>{
+             location.href ="/admin/Cars";
+        })
+
+        userpage.addEventListener("click", () =>{
+             location.href ="/admin/Users";
+        })
+
+        feedbackpage.addEventListener("click", () =>{
+             location.href ="/admin/Feedbacks";
+        })
+
+
+
+        const updatecars = document.getElementById("updatecarspage");
+        const updatebikes = document.getElementById("updatesparepartspage");
+        const updatespareparts = document.getElementById("updatebikespage");
+        const updateusers = document.getElementById("updateuserspage");
+
+        const deleteecars = document.getElementById("deletecarspage");
+        const deletebikes = document.getElementById("deletesparepartspage");
+        const deletespareparts = document.getElementById("deletebikespage");
+        const deleteeusers = document.getElementById("deleteuserspage");
+
+        const addcars = document.getElementById("addcarspage");
+        const addbikes = document.getElementById("addsparepartspage");
+        const addspareparts = document.getElementById("addbikespage");
+        const adduser = document.getElementById("adduserspage");
+
+
+        updatebikes.addEventListener("click", () => {
+            location.href = "/admin/updatebikes";
+        })
+        updatespareparts.addEventListener("click", () => {
+            location.href = "/admin/updatespareparts";
+        })
+        updatecars.addEventListener("click", () =>{
+             location.href ="/admin/updatecars";
+        })
+        updateusers.addEventListener("click", () =>{
+             location.href ="/admin/updateusers";
+        })
+
+
+        addbikes.addEventListener("click", () => {
+            location.href = "/admin/addbikes";
+        })
+        addspareparts.addEventListener("click", () => {
+            location.href = "/admin/addspareparts";
+        })
+        addcars.addEventListener("click", () =>{
+             location.href ="/admin/addcars";
+        })
+        adduser.addEventListener("click", () =>{
+             location.href ="/admin/addusers";
+        })
+
+
+        deletebikes.addEventListener("click", () => {
+            location.href = "/admin/deletebikes";
+        })
+        deletespareparts.addEventListener("click", () => {
+            location.href = "/admin/deletespareparts";
+        })
+        deleteecars.addEventListener("click", () =>{
+             location.href ="/admin/deletecars";
+        })
+        deleteeusers.addEventListener("click", () =>{
+             location.href ="/admin/deleteusers";
+        })
+
+        
+
+        
+
+    </script>
+</body>
+
+</html>
