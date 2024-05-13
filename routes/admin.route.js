@@ -4,7 +4,7 @@ const {isAdmin} = require('../midlleWare/authJwt.Md')
 const fuction = require('../controllers/admin.Controllers')
 const check = require("../midlleWare/checkDuplicate")
 
-
+app.use("/Images",express.static('Images'))
 
 router.get("/signIn", (req, res) => { res.render("admin/signIn"); });
 
