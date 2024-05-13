@@ -240,7 +240,7 @@ img[alt=buy] {
     font-weight: bold;
     font-size: large;
     padding-top: 13px;
-    font-family: 'Aclonica';
+    font-family:'Times New Roman', Times, serif;
     font-size: 22px;
     /* font-size: 46px; */
     color: white;
@@ -314,7 +314,7 @@ ul.navbar {
     padding-top: 10px;
     overflow: hidden;
     height: 60px;
-    background-color: rgb(143, 29, 29);
+    background-color: rgb(3, 34, 75);
 
 }
 
