@@ -144,7 +144,7 @@ a {
 
 h3 {
     margin: 5px;
-    font-family:monospace;
+    font-family:'Times New Roman', Times, serif;
     font-size: 22px;
 }
 
@@ -181,7 +181,7 @@ img[alt="#"] {
     font-weight: bold;
     font-size: large;
     padding-top: 13px;
-    font-family: 'Aclonica';
+    font-family:'Times New Roman', Times, serif;
     font-size: 22px;
     /* font-size: 46px; */
     color: white;
@@ -280,6 +280,9 @@ input {
     /* font-family: 'SourceSans', sans-serif; */
 }
 
+.navbar{
+    font-family: 'Times New Roman', Times, serif;
+}
 
 button {
     width: 180px;

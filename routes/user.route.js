@@ -4,7 +4,7 @@ const {isUser} = require('../midlleWare/authJwt.Md')
 const fuction = require('../controllers/user.Controllers')
 const check = require("../midlleWare/checkDuplicate")
 
-app.use("/Images",express.static('Images'))
+
 // router.post('/signUpUser' , check , fuction.signUpUser);
 // router.get('/signIn' , check , fuction.signInUser);
 

@@ -11,7 +11,7 @@ const sequelize = require("../config");
 const {Op} = require('sequelize');
 const errorHandler = require("../utlis/errorhandler")
 
-app.use("/Images",express.static('Images'))
+
 
 const multer = require("multer");
   
