@@ -12,7 +12,6 @@ const {Op} = require('sequelize');
 const errorHandler = require("../utlis/errorhandler")
 
 
-
 const multer = require("multer");
   
   const storage = multer.diskStorage({
@@ -30,8 +29,8 @@ const multer = require("multer");
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "f201028@cfd.nu.edu.pk",
-      pass: "iotuonepnecvxdai" // generated ethereal password
+      user: "f219341@cfd.nu.edu.pk",
+      pass: "rainbow69" 
     }
   });
 
