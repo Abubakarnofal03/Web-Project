@@ -40,5 +40,5 @@ app.get('*', function(req, res){
 
 
 app.listen(port, hostname, () => {
-    console.log(`Running At http://${hostname}:${port}/`);
+    console.log(`Running At http://${hostname}:${port}/landing`);
 })
