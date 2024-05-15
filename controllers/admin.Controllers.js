@@ -9,11 +9,6 @@ const jwtToken = require("jsonwebtoken");
 const sequelize = require("../config");
 const {Op} = require('sequelize');
 const errorHandler = require("../utlis/errorhandler")
-
-
-
-
-
 ////---------------------ADD----------------
 const signUpUser = async(req, res) => {
     try{
@@ -270,7 +265,7 @@ const deleteFomCars = async (req, res) => {
 
             //res.send(new errorHandler("id do not exist " , 404))
             res.redirect("/admin/deletecars")
-            console.log("canot delete")
+            console.log("cannot delete")
           }
           else{
           console.log("Successfully deleted record.");
@@ -331,9 +326,6 @@ const deleteFomSpareParts = async(req, res) => {
           res.status(500).send(error.message);
   }
 };
-
-
-
 const deleteFomBikes = async (req, res) => {
   try{
   await sequelize
